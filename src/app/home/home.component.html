@@ -1,0 +1,99 @@
+<section>
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../../../assets/img/contact.jpg" alt="First slide">
+                <div class="carousel-inner-text">
+                    <div class="container">
+                        <h2 class="text-white">
+                            We are increasing access to sanitary products for the 10 million girls in low income communities across Africa
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../../assets/img/people.jpg" alt="Second slide">
+                <div class="carousel-inner-text">
+                    <div class="container">
+                        <h2 class="text-white">
+                            We are increasing access to sanitary products for the 10 million girls in low income communities across Africa
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../../../assets/img/white+black.jpg" alt="Third slide">
+                <div class="carousel-inner-text">
+                    <div class="container">
+                        <h2 class="text-white">
+                            We are increasing access to sanitary products for the 10 million girls in low income communities across Africa
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <article class="mis_art">
+            <h2 class="text-green">Our Work at a Glance</h2>
+            <p class="text-green">
+                Increasing access to sanitary products<strong>.</strong> Improving Public Health<strong>.</strong> Creating Ecomonic Opportunities in Rural Communities<strong>.</strong>
+            </p>
+            <div class="row mis_cat">
+                <div class="col-md-4">
+                    <div class="mis_row">
+                        <h4 class="text-green">4000</h4>
+                        <p class="text-green">Girls reached</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mis_row">
+                        <h4 class="text-green">4</h4>
+                        <p class="text-green">Communities</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mis_row">
+                        <h4 class="text-green">4000</h4>
+                        <p class="text-green">Sanitary Pads Distributed</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="bg-gray">
+    <div class="container">
+        <article class="mis_artx">
+            <div class="row" *ngFor="let event of event ">
+                <div class="col-md-4 upcoming">
+                    <div class="mis_row">
+                        <div class="">
+                            <h3 class="text-green">UPCOMING</h3>
+                            <h2 class="text-green">EVENT</h2>
+                            <h1 class="text-red">{{event.date | date:'d MMM'}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 imaging">
+                    <div class="side-image">
+                        <div class="inner-text">
+                            <h2 class="text-white">{{event.name}}</h2>
+                            <h5 class="text-white">{{event.date | date: 'longDate'}}</h5>
+                            <h3 class="text-white">{{event.city}}, {{event.state}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

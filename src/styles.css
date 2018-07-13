@@ -1,1 +1,398 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/* everywhere else */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif
+}
+:root {
+  --primary: #447148 !important;
+  --light: #fff !important;
+  --red: #CC1717 !important;
+  --darkred: #911E2C !important;
+  --blend: #6A141E !important;
+  --gray: #eee !important;
+}
+.nav-link.active {
+  color: var(--red) !important;
+}
+.text-green {
+  color: var(--primary);
+}
+.text-red {
+  color: var(--red);
+}
+.text-mute {
+  color: #cccccc;
+  font-weight: 300;
+}
+.bg-gray {
+  position: relative;
+  background: var(--gray);
+}
+.mis_art {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 25px 0 ;
+  margin: 0 auto !important;
+  max-width: 800px !important;
+}
+.mis_artx {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 25px 0 ;
+  margin: 0 auto !important;
+  max-width: 800px !important;
+}
+.mis_art h2, .mis_artx h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.mis_art p, .mis_artx p {
+  position: relative;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center !important;
+}
+.mis_cat {
+  position: relative;
+  display: block;
+  margin-top: 5rem !important;
+}
+.mis_cat .col-md-4 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.mis_row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.mis_row h4 {
+  font-size: 48px;
+  font-weight: bold;
+}
+.mis_row p {
+  font-size: 22px;
+}
+.mis_row h3 {
+  font-weight: 300;
+}
+.mis_row h2 {
+  font-weight: bold;
+}
+.mis_row h1.text-red {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.8rem;
+}
+.upcoming {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center !important;
+}
+.imaging {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.side-image {
+  display: block;
+  margin: 0;
+  position: relative;
+  background: url('./assets/img/white+black.jpg') center center no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.side-image:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--primary);
+  opacity: .7;
+}
+.inner-text {
+  position: relative;
+  text-align: left;
+  padding: 10px;
+  
+}
+.inner-text h2, .inner-text h5, .inner-text h3 {
+  font-weight: 300 !important;
+}
+.inner-text h2 {
+  font-size: 38px;
+  line-height: 1.2;
+}
+.inner-text h3 {
+  font-size: 26px;
+}
+.inner-text h5 {
+  margin-bottom: 2rem;
+}
+.landing-2 {
+  display: block;
+  margin: 0;
+  position: relative;
+  background: url('./assets/img/white+black.jpg') bottom no-repeat;
+  background-position: 50% 30%;
+  background-clip: border-box;
+  height: inherit;
+  background-size: cover;
+  object-fit: scale-down;
+}
+.landing-3 {
+  display: block;
+  margin: 0;
+  position: relative;
+  background: url('./assets/img/contact.jpg') center center no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.landing-1 {
+  background: url('./assets/img/people.jpg') center center no-repeat;
+  height: inherit;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.landing {
+  display: block;
+  margin: 0;
+  position: relative;
+}
+.landing:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--blend);
+  opacity: .7;
+}
+.landing-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60vh;
+}
+.landing-text h2 {
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-size: 70px;
+  font-weight: bold;
+  /* text-align: center */
+}
+.text-content {
+  position: relative;
+  padding: 25px 0;
+}
+.text-content h2 {
+  font-weight: 500;
+  text-align: center;
+}
+.text-content h2, .text-content p {
+  display: block;
+  position:relative;
+  line-height: 1.5;
+}
+.team {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: 5rem !important;
+}
+.team-rounded {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--darkred);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.team-rounded img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sm-padding {
+  padding: 50px 0;
+}
+header {
+  display: block;
+  position: relative;
+  background: #fff !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-height: 50px !important;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 2;
+}
+footer {
+  position: relative;
+  background: var(--primary);
+  padding: 15px 0;
+}
+.site-links {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.site-links a, .site-links a:hover, .site-links a:visited {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0;
+  margin: 0;
+}
+.site-links hr {
+  padding: 0;
+  margin: 5px 0;
+  background: #eee
+}
+.social-links {
+  position: relative;
+  text-align: center;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+.home-slider {
+  position: relative;
+}
+.home-slider:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--blend);
+  opacity: .7;
+}
+.carousel {
+  position: relative;
+  display: block;
+  height: 80vh;
+}
+.slide {
+  position: relative;
+  display: block;
+}
+
+.carousel-inner {
+  position: relative;
+  height: 100%;
+}
+.carousel-item:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--blend);
+  opacity: .7;
+}
+.carousel-item {
+  height: inherit !important;
+}
+.carousel-item img {
+  display: inline-block;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.carousel-inner-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: grid;
+  justify-content: baseline;
+  align-self: center;
+  align-items: center;
+  z-index: 5;
+}
+.carousel-inner-text h2 {
+  display: block;
+  position: relative !important;
+  font-size: 50px;
+  max-width: 900px;
+}
+.navbar-light .navbar-toggler {
+  color: #6A141E !important;
+  border-color: none !important;
+  border: none !important;
+  outline: none;
+}
+.image-abt {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 40rem ) {
+  
+  header {
+    display: block;
+    position: relative;
+    background: #fff !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-height: inherit!important;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+  }
+  .carousel {
+    height: 50vh;
+  }
+  .landing-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  .landing-text h2 {
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center
+  }
+  .carousel-inner-text h2 {
+    font-size: 20px;
+  }
+  .mis_art h2 {
+    font-size: 31px;
+  }
+  .mis_art p {
+    font-size: 20px;
+  }
+}

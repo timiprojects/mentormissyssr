@@ -1,15 +1,25 @@
 import {Component, OnInit} from '@angular/core';
+import { EventsService } from '../services/events.service';
 
 @Component({
   selector: 'app-home',
-  template: `<h3>{{ message }}</h3>`
+  templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-  public message: string;
+  event: any;
 
-  constructor() {}
+  constructor( private _service: EventsService ) { }
 
   ngOnInit() {
-    this.message = 'Hello';
+    this.getEvent();
+  }
+
+  getEvent () {
+    this._service.getLatestEvent()
+      .subscribe((res: any) => {
+        this.event = res;
+      }, (error: any) => {
+        console.log(error);
+      });
   }
 }

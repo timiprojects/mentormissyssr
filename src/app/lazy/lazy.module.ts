@@ -1,5 +1,6 @@
 import {NgModule, Component} from '@angular/core';
 import {RouterModule} from '@angular/router';
+import { AboutComponent } from '../about/about.component';
 
 @Component({
   selector: 'app-lazy-view',

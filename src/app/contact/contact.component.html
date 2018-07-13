@@ -1,0 +1,42 @@
+<section>
+  <div class="landing landing-3">
+    <div class="landing-text">
+      <div class="container">
+        <h2 class="text-white">We’d love to hear from you,
+          <br> Drop us a line!</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <article class="mis_artx sm-padding">
+      <form #companyForm="ngForm" (ngSubmit)="sendMail()" class="form">
+        <div class="input-group">
+          <input type="text" name="name" class="form-control" placeholder="Your name" [(ngModel)]="name" required minlength="3" ngModel
+            #nameField="ngModel">
+        </div>
+        <div class="alert alert-danger" *ngIf="nameField.invalid && nameField.dirty">
+          Name is required and needs to be at least 3 characters long.
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" id="" class="form-control" placeholder="Your email" [(ngModel)]="email" required email ngModel
+            #emailField="ngModel">
+        </div>
+        <div class="alert alert-danger" *ngIf="emailField.invalid && emailField.dirty">
+          Needs to be a valid email.
+        </div>
+        <div class="input-group">
+          <textarea name="message" name="message" cols="30" rows="10" class="form-control" placeholder="Your message" [(ngModel)]="message"
+            required message ngModel #messageField="ngModel"></textarea>
+        </div>
+        <div class="alert alert-danger" *ngIf="messageField.invalid && messageField.dirty">
+            Your message is required!
+          </div>
+        <div class="input-group">
+          <button type="submit" class="btn btn-success btn-inline" [disabled]="!companyForm.valid || isSending">Send Message</button>
+        </div>
+      </form>
+    </article>
+  </div>
+</section>
